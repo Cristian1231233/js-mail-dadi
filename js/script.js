@@ -27,7 +27,7 @@ for(let i = 0; i < listEmail.length; i++){
 if(emailValida == true){
     console.log('puoi accedere');
     let buono = document.getElementById('email');
-    buono.innerHTML = emailUtente,'la tua email è nella lista';
+    buono.innerHTML = emailUtente;
 }else{
     console.log('non puoi accedere');
     let buono = document.getElementById('email');
