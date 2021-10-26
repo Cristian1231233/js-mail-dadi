@@ -28,6 +28,7 @@ if(emailUtente === listEmail[i]){
         ` email non valida 
         `
     )
+    console.log('email non valida');
 }
 }
 
