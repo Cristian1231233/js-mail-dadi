@@ -7,7 +7,7 @@
 
 
 
- const emailUtente = 'Sara2@gmail.com';// prompt('Inserisci la tua email');
+ const emailUtente = prompt('Inserisci la tua email');
 console.log(emailUtente);
 
 const listEmail = ['Giovanni2@gmail.com', 'Sara2@gmail.com', 'Marco3@gmail.com', 
@@ -27,7 +27,7 @@ for(let i = 0; i < listEmail.length; i++){
 if(emailValida == true){
     console.log('puoi accedere');
     let buono = document.getElementById('email');
-    buono.innerHTML = emailUtente;
+    buono.innerHTML = emailUtente,'la tua email è nella lista';
 }else{
     console.log('non puoi accedere');
     let buono = document.getElementById('email');
