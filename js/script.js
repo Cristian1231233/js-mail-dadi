@@ -7,7 +7,7 @@
 
 
 
-const emailUtente = 'Giovanni2gmail.com' ;//Inserisci la tua email
+ const emailUtente = '';// prompt('Inserisci la tua email');
 console.log(emailUtente);
 
 const listEmail = ['Giovanni2@gmail.com', 'Sara2@gmail.com', 'Marco3@gmail.com', 
@@ -23,6 +23,8 @@ if(emailUtente === listEmail[i]){
     console.log('emailValida');
 }
 }
+const mail = document.getElementById('email');
+mail.innerHTML = emailUtente;
 // if(emailValida == true){
 //     console.log('puoi accedere');
 // }else{
@@ -41,8 +43,31 @@ console.log(numPc);
 
 if(numPlayer > numPc){
     console.log('vince numPlayer');
+    let result = document.getElementById('player');
+    result.innerHTML = (
+        ` Il player ha scelto ${numPlayer} <br>
+        Il pc ha scelto ${numPc} <br>
+        Quindi vince ${numPlayer}
+        `
+    )
 }else if(numPlayer < numPc){
     console.log('vince numPc');
+    let result = document.getElementById('player');
+    result.innerHTML = (
+        ` Il player ha scelto ${numPlayer} <br>
+        Il pc ha scelto ${numPc} <br>
+        Quindi vince ${numPc}
+        `
+    )
 }else{
     console.log('pareggio');
+    let result = document.getElementById('player');
+    result.innerHTML = (
+        ` Il player ha scelto ${numPlayer} <br>
+        Il pc ha scelto ${numPc} <br>
+        Quindi pareggio
+        `
+    )
 }
+
+
