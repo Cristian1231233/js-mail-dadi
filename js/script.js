@@ -7,7 +7,7 @@
 
 
 
- const emailUtente = '';// prompt('Inserisci la tua email');
+ const emailUtente = 'Sara2@gmail.com';// prompt('Inserisci la tua email');
 console.log(emailUtente);
 
 const listEmail = ['Giovanni2@gmail.com', 'Sara2@gmail.com', 'Marco3@gmail.com', 
@@ -19,12 +19,18 @@ for(let i = 0; i < listEmail.length; i++){
     console.log(listEmail[i]);
 
 if(emailUtente === listEmail[i]){
-    emailValida = 'true';
     console.log('emailValida');
+    let mail = document.getElementById('email');
+    mail.innerHTML = emailUtente;
+}else{
+    let mail = document.getElementById('email');
+    mail.innerHTML = (
+        ` email non valida 
+        `
+    )
 }
 }
-const mail = document.getElementById('email');
-mail.innerHTML = emailUtente;
+
 // if(emailValida == true){
 //     console.log('puoi accedere');
 // }else{
