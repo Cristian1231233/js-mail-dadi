@@ -21,6 +21,5 @@ for(let i = 0; i < (listEmail.length); i++){
 if(emailUtente === listEmail[i]){
     emailValida = 'true';
     console.log('email trovata');
-    console.log('ciao');
 }
 }
