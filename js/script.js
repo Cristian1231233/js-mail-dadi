@@ -13,30 +13,26 @@ console.log(emailUtente);
 const listEmail = ['Giovanni2@gmail.com', 'Sara2@gmail.com', 'Marco3@gmail.com', 
 'Silvio42@gmail.com', 'Carlo23@gmail.com',];
 console.log(listEmail);
-const emailValida = 'false';
+let emailValida = false;
 
 for(let i = 0; i < listEmail.length; i++){
     console.log(listEmail[i]);
 
-if(emailUtente === listEmail[i]){
-    console.log('emailValida');
-    let mail = document.getElementById('email');
-    mail.innerHTML = emailUtente;
-}else{
-    let mail = document.getElementById('email');
-    mail.innerHTML = (
-        ` email non valida 
-        `
-    )
-    console.log('email non valida');
-}
+    if(emailUtente === listEmail[i]){
+        console.log('emailValida');
+        emailValida = true;
+    }
 }
 
-// if(emailValida == true){
-//     console.log('puoi accedere');
-// }else{
-//     console.log('non puoi accedere');
-// }
+if(emailValida == true){
+    console.log('puoi accedere');
+    let buono = document.getElementById('email');
+    buono.innerHTML = emailUtente;
+}else{
+    console.log('non puoi accedere');
+    let buono = document.getElementById('email');
+    buono.innerHTML = 'Non puoi accedere';
+}
 
 
 //Giocatore e computer generano un numero da 1 a 6
@@ -54,7 +50,7 @@ if(numPlayer > numPc){
     result.innerHTML = (
         ` Il player ha scelto ${numPlayer} <br>
         Il pc ha scelto ${numPc} <br>
-        Quindi vince ${numPlayer}
+        Quindi vince il Player
         `
     )
 }else if(numPlayer < numPc){
@@ -63,7 +59,7 @@ if(numPlayer > numPc){
     result.innerHTML = (
         ` Il player ha scelto ${numPlayer} <br>
         Il pc ha scelto ${numPc} <br>
-        Quindi vince ${numPc}
+        Quindi vince il Pc
         `
     )
 }else{
